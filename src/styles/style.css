@@ -1,1 +1,65 @@
 /** CSS STYLE **/
+html *{
+  padding: 0;
+  margin: unset;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  color: #303846;
+  line-height: 1.5;
+  list-style-type: none;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 1.8em;
+  padding-bottom: 0.5em;
+}
+img {
+  height: 2.5rem;
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 3.75rem;
+  padding: 1rem 2rem;
+}
+header * {
+  font-weight: bold;
+}
+.logo > span {
+  font-size: 1.2rem;
+}
+nav > ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*  Main part */
+
+main {
+  padding-top: 3.75rem;
+}
+.bg-white {
+  background-color: white;
+}
+.fl-grow-3 {
+  flex-grow: .2;
+}
+.w20 {
+  width: 20%;
+}
+.mr {
+  margin-right: 1rem;
+}
+.d-flex {
+  display: flex;
+}
+.al-it-center {
+  align-items: center;
+}
