@@ -3,47 +3,16 @@ html *{
   padding: 0;
   margin: unset;
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #303846;
   line-height: 1.5;
   list-style-type: none;
-}
-h1 {
-  font-size: 3em;
-}
-h2 {
-  font-size: 1.8em;
-  padding-bottom: 0.5em;
-}
-img {
-  height: 2.5rem;
-}
-header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  height: 3.75rem;
-  padding: 1rem 2rem;
-}
-header * {
-  font-weight: bold;
-}
-.logo > span {
-  font-size: 1.2rem;
-}
-nav > ul {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  text-decoration: unset;
 
-/*  Main part */
-
-main {
-  padding-top: 3.75rem;
+}
+textarea:focus, input:focus, button:focus {
+  outline: none;
 }
 .bg-white {
   background-color: white;
@@ -60,6 +29,83 @@ main {
 .d-flex {
   display: flex;
 }
-.al-it-center {
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.align-items-center {
   align-items: center;
+}
+.txt-align-center {
+  text-align: center;
+}
+.btn {
+  padding: .625rem;
+  border-color: #fff;
+  border-style: groove;
+  background-color: unset;
+  color: #fff;
+  border-radius: .625rem;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: .8;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 1.8em;
+  padding-bottom: 0.5em;
+}
+header img {
+  height: 2.5rem;
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 3.75rem;
+  padding: 1rem 2rem;
+}
+header * {
+  font-weight: bold;
+}
+nav > ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*  Main part */
+
+main {
+  padding-top: 3.75rem;
+}
+
+/* Section with image */
+
+.first-section {
+  padding: 3.75rem 0;
+  background-image: url("../assets/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.content {
+  max-width: 1000px;
+  text-align: center;
+}
+.first-section .content > img {
+  height: 8rem;
+}
+.first-section .content > * {
+  color: #fff;
+}
+.first-section .content > p {
+  padding: .5rem
 }
