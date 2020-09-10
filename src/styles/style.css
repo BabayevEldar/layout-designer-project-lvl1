@@ -26,12 +26,24 @@ textarea:focus, input:focus, button:focus {
 .mr {
   margin-right: 1rem;
 }
+.d-inln-block {
+  display: inline-block;
+}
 .d-flex {
   display: flex;
 }
 .d-flex-column {
   display: flex;
   flex-direction: column;
+}
+.flx-dir-row-r {
+  flex-direction: row-reverse;
+}
+.jst-cnt-center {
+  justify-content: center;
+}
+.jst-cnt-space-btwn {
+  justify-content: space-between;
 }
 .align-items-center {
   align-items: center;
@@ -60,16 +72,20 @@ h2 {
   font-size: 1.8em;
   padding-bottom: 0.5em;
 }
+section {
+  padding: 3.75rem 0;
+}
 header img {
   height: 2.5rem;
 }
 header {
   position: fixed;
   display: flex;
-  justify-content: space-between;
   width: 100vw;
   height: 3.75rem;
   padding: 1rem 2rem;
+  justify-content: space-between;
+  background-color: #fff;
 }
 header * {
   font-weight: bold;
@@ -87,25 +103,36 @@ main {
   padding-top: 3.75rem;
 }
 
-/* Section with image */
-
-.first-section {
-  padding: 3.75rem 0;
+main > section:first-child {
   background-image: url("../assets/banner.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+/* Section with image */
+
 .content {
   max-width: 1000px;
-  text-align: center;
 }
-.first-section .content > img {
+
+section:first-child .content > img {
   height: 8rem;
 }
-.first-section .content > * {
+section:first-child .content > * {
   color: #fff;
 }
-.first-section .content > p {
+section:first-child .content > p {
   padding: .5rem
+}
+section:nth-child(2) article {
+  max-width: 30%;
+}
+section:nth-child(3) {
+  background-color: #f7f7f7;
+}
+section:nth-child(3) img, section:nth-child(4) img {
+  width: 30%;
+}
+section:nth-child(3) article, section:nth-child(4) article {
+  width: 45%;
 }
