@@ -17,7 +17,7 @@
       <div class='logo w20 d-flex align-items-center'>
         <img src="./assets/logo.svg"
              alt="Logo"
-             class="mr">
+             class="mr logo__img">
         <span>Лунное море</span>
       </div>
       <nav class="menu fl-grow-3">
@@ -36,15 +36,17 @@
     </header>
     <main>
       <section class="txt-align-center">
-        <div class="content d-inln-block txt-align-center">
-          <img src="assets/logo.svg"
-               alt="Logo">
-          <h1>ЖК &laquo;Лунное море&raquo;</h1>
-          <p>Место, откуда не хочется улетать</p>
-          <form action="#bookin-form">
-            <button class='btn'>Забронировать</button>
-          </form>
-        </div>
+        <a id="main">
+          <div class="content d-inln-block txt-align-center">
+            <img src="assets/logo.svg"
+                 alt="Logo">
+            <h1>ЖК &laquo;Лунное море&raquo;</h1>
+            <p>Место, откуда не хочется улетать</p>
+            <form action="#bookin-form">
+              <button class='btn'>Забронировать</button>
+            </form>
+          </div>
+        </a>
       </section>
       <section class="d-flex jst-cnt-center"><a id="advantages">
           <div class="content d-flex space-between">
@@ -154,7 +156,28 @@
       </section>
     </main>
     <footer>
-      <h3>Footer</h3>
+      <section class="d-flex content">
+        <div class='logo w20 d-flex align-items-center'>
+          <img src="./assets/logo.svg"
+               alt="Logo"
+               class="mr logo__img">
+          <span>Лунное море</span>
+        </div>
+        <div class='documentation'>
+          <h3>Проектная документация</h3>
+          <ul>
+            <li><a href="#download">Скачать</a></li>
+            <li><a href="#gotopage">Посмотреть на сайте</a></li>
+          </ul>
+        </div>
+        <div class="about">
+          <h3>О застройщике</h3>
+          <ul>
+            <li><a href="#feedbacks">Отзывы</a></li>
+            <li><a href="#main">Сайт компании</a></li>
+          </ul>
+        </div>
+      </section>
     </footer>
   </body>
 
