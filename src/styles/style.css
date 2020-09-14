@@ -9,10 +9,13 @@ html *{
   line-height: 1.5;
   list-style-type: none;
   text-decoration: unset;
-
 }
 textarea:focus, input:focus, button:focus {
   outline: none;
+}
+small {
+  font-size: smaller;
+  opacity: .8;
 }
 label {
   cursor: pointer;
@@ -81,8 +84,15 @@ h2 {
 section {
   padding: 3.75rem 0;
 }
-header img {
+.logo__img {
   height: 2.5rem;
+}
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.logo-wrapper > .logo {
+  margin-bottom: 1rem;
 }
 header {
   position: fixed;
@@ -118,7 +128,7 @@ main > section:first-child {
 /* Section with image */
 
 .content {
-  max-width: 1000px;
+  width: 1000px;
 }
 
 section:first-child .content > img {
@@ -148,7 +158,7 @@ section:not(:first-child) article {
   background-color: #f7f7f7;
 }
 #booking > form {
-  width: 50%;
+  width: 500px;
 }
 #booking > form > * {
   margin-bottom: 1rem;
@@ -181,4 +191,28 @@ form div > :nth-child(2) {
 }
 form div > :nth-child(2):focus {
   outline: transparent;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #303846;
+}
+footer > section {
+  display: flex;
+  justify-content: space-between;
+}
+footer * {
+  color: #fff
+}
+footer h3 {
+  margin-bottom: 1rem;
+}
+footer ul {
+  padding-left: 2.5rem;
+}
+footer li {
+  list-style-type: initial;
 }
