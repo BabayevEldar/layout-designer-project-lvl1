@@ -14,6 +14,12 @@ html *{
 textarea:focus, input:focus, button:focus {
   outline: none;
 }
+label {
+  cursor: pointer;
+}
+select {
+  background-color: unset;
+}
 .bg-white {
   background-color: white;
 }
@@ -42,7 +48,7 @@ textarea:focus, input:focus, button:focus {
 .jst-cnt-center {
   justify-content: center;
 }
-.jst-cnt-space-btwn {
+.space-between {
   justify-content: space-between;
 }
 .align-items-center {
@@ -130,9 +136,49 @@ section:nth-child(2) article {
 section:nth-child(3) {
   background-color: #f7f7f7;
 }
-section:nth-child(3) img, section:nth-child(4) img {
+section:not(:first-child) img {
   width: 30%;
 }
-section:nth-child(3) article, section:nth-child(4) article {
+section:not(:first-child) article {
   width: 45%;
+}
+
+/* Form section */
+#booking {
+  background-color: #f7f7f7;
+}
+#booking > form {
+  width: 50%;
+}
+#booking > form > * {
+  margin-bottom: 1rem;
+}
+.border_green {
+  border-color: #09d3ac;
+}
+.text_green {
+  color: #09d3ac;
+}
+#booking > form > fieldset {
+  padding: .625rem;
+  border-style: groove;
+}
+#booking > form > fieldset > *:not(:first-child) {
+  margin-bottom: 1rem;
+}
+#booking > form > button {
+  width: 40%;
+}
+form div > :first-child {
+  font-weight: bold;
+}
+form div > :nth-child(2) {
+  width: 50%;
+  padding: .3rem .5rem;
+  border: 1px solid;
+  border-radius: .5rem;
+  font-size: .8rem;
+}
+form div > :nth-child(2):focus {
+  outline: transparent;
 }

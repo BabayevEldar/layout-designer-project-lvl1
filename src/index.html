@@ -41,13 +41,13 @@
                alt="Logo">
           <h1>ЖК &laquo;Лунное море&raquo;</h1>
           <p>Место, откуда не хочется улетать</p>
-          <form action="#form">
+          <form action="#bookin-form">
             <button class='btn'>Забронировать</button>
           </form>
         </div>
       </section>
       <section class="d-flex jst-cnt-center"><a id="advantages">
-          <div class="content d-flex jst-cnt-space-btwn">
+          <div class="content d-flex space-between">
             <article>
               <h2>Уникальный вид</h2>
               <p>Вид на космос из вашего окна. Мы построили дома с большими окнами, чтобы вы могли наслаждаться
@@ -71,7 +71,7 @@
       </section>
       <section class="d-flex jst-cnt-center">
         <a id="about">
-          <div class="content d-flex jst-cnt-space-btwn">
+          <div class="content d-flex space-between">
             <article>
               <h2>О ЖК &laquo;Лунное море&raquo;</h2>
               <p>
@@ -90,7 +90,7 @@
       </section>
       <section class="d-flex jst-cnt-center">
         <a id="places">
-          <div class="content d-flex jst-cnt-space-btwn flx-dir-row-r">
+          <div class="content d-flex space-between flx-dir-row-r">
             <article>
               <h2>Места для отдыха</h2>
               <p>Луна обладает всеми условиями для комфортного отдыха от большого города. В вашем распоряжении 22 моря и
@@ -103,6 +103,54 @@
                  alt="Places for rest">
           </div>
         </a>
+      </section>
+      <section class="d-flex-column align-items-center"
+               id="booking">
+        <a id="booking-form"></a>
+        <h2>Оставьте заявку сегодня!</h2>
+        <form class="content">
+          <fieldset class="border_green">
+            <legend class="text_green">Параметры квартиры</legend>
+            <div class="d-flex space-between">
+              <label for="room-options">Количество комнат:</label>
+              <select id="room-options">
+                <option selected>3</option>
+                <option>2</option>
+                <option>1</option>
+              </select>
+            </div>
+            <div class="d-flex space-between">
+              <label for="room-finishing">Отделка:</label>
+              <select id="room-finishing">
+                <option selected>Без отделки</option>
+                <option>Евроремонт</option>
+                <option>Не важно</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset class="d-flex border_green">
+            <legend class="text_green">Контактная информация</legend>
+            <div class="d-flex space-between">
+              <label for="name">Имя:</label>
+              <input id="name"
+                     type="text"
+                     required />
+            </div>
+            <div class="d-flex space-between">
+              <label for="phone">Телефон:</label>
+              <input type="phone"
+                     id="phone"
+                     required />
+            </div>
+            <div class="d-flex space-between">
+              <label for="e-mail">E-mail:</label>
+              <input type="email"
+                     required />
+            </div>
+          </fieldset>
+          <button type="submit"
+                  class="btn text_green border_green">Отправить</button>
+        </form>
       </section>
     </main>
     <footer>
