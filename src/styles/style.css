@@ -13,22 +13,25 @@ html * {
   list-style-type: none;
 }
 
+label,
+button,
+a {
+  outline: none;
+  cursor: pointer;
+}
+
 textarea:focus,
 input:focus,
-button:focus {
+button:focus,
+a:focus {
   outline: none;
+  box-shadow: 0 0 1rem #09d3ac;
 }
 
 small {
   font-size: smaller;
 
   opacity: 0.8;
-}
-
-label {
-  font-weight: bold;
-
-  cursor: pointer;
 }
 
 select {
@@ -40,15 +43,23 @@ legend {
   font-size: 1.3rem;
 }
 
-.bg-white {
+li {
+  list-style-type: none;
+}
+
+.bg_white {
   background-color: white;
+}
+
+.bg_cream {
+  background-color: #f7f7f7;
 }
 
 .fl-grow-3 {
   flex-grow: 0.1;
 }
 
-.w20 {
+.w-20 {
   width: 20%;
 }
 
@@ -73,7 +84,7 @@ legend {
   flex-direction: row-reverse;
 }
 
-.jst-cnt-center {
+.content-center {
   justify-content: center;
 }
 
@@ -85,26 +96,30 @@ legend {
   justify-content: space-evenly;
 }
 
+.space-around {
+  justify-content: space-around;
+}
+
 .align-items-center {
   align-items: center;
 }
 
-.txt-align-center {
+.text_center {
   text-align: center;
 }
 
 .btn {
   padding: 0.625rem;
 
-  color: #fff;
-  font-weight: bold;
   font-size: 1em;
 
   background-color: unset;
-  border-color: #fff;
   border-style: groove;
   border-radius: 0.625rem;
-  cursor: pointer;
+}
+
+.border_white {
+  border-color: white;
 }
 
 .btn:hover {
@@ -119,6 +134,22 @@ h2 {
   padding-bottom: 0.5em;
 
   font-size: 1.8em;
+}
+
+.border_green {
+  border-color: #09d3ac;
+}
+
+.text_green {
+  color: #09d3ac;
+}
+
+.text_white {
+  color: white;
+}
+
+.text_bold {
+  font-weight: bold;
 }
 
 section {
@@ -138,27 +169,15 @@ section {
   margin-bottom: 1rem;
 }
 
-header {
-  position: fixed;
-
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
+.header {
   height: 3.75rem;
   padding: 1rem 2rem;
-
-  background-color: #fff;
 }
 
-header * {
-  font-weight: bold;
-}
-
-nav > ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
+.header-fixed {
+  position: fixed;
+  right: 0;
+  left: 0;
 }
 
 /*  Main part */
@@ -167,78 +186,52 @@ main {
   padding-top: 3.75rem;
 }
 
-footer > section {
-  display: flex;
-  justify-content: space-between;
-}
-
-section:nth-child(3) {
-  background-color: #f7f7f7;
-}
-
-main > section:first-child {
+#banner {
   background-image: url("../assets/banner.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+#advantages article {
+  width: 20%;
+}
+
 /* Section with image */
 
 .content {
-  width: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-section:not(:first-child) img {
+#about img,
+#places img {
   width: 30%;
 }
 
-section:first-child .content > img {
-  height: 8rem;
-}
-
-footer * {
-  color: #fff;
-}
-
-section:first-child .content > * {
-  color: #fff;
-}
-
-section:first-child .content > p {
-  padding: 0.5rem;
-}
-
-section:nth-child(2) article {
-  max-width: 30%;
-}
-
-section:not(:first-child) article {
+#about article,
+#places article {
   width: 45%;
 }
 
-/* Form section */
-#booking {
-  background-color: #f7f7f7;
+#banner img {
+  height: 8rem;
 }
 
-#booking > form {
-  width: 500px;
+#banner p {
+  padding: 0.5rem;
+}
+
+/* Form section */
+#booking > .content {
+  max-width: 500px;
 }
 
 #booking > form > * {
   margin-bottom: 1rem;
 }
 
-.border_green {
-  border-color: #09d3ac;
-}
-
-.text_green {
-  color: #09d3ac;
-}
-
-#booking > form > fieldset {
+.fieldset {
   padding: 1rem 2rem;
 
   border-style: groove;
@@ -252,12 +245,8 @@ section:not(:first-child) article {
   margin-bottom: 1rem;
 }
 
-#booking > form > button {
+#booking button {
   width: 35%;
-}
-
-form div > :first-child {
-  font-weight: bold;
 }
 
 form div > :nth-child(2) {
@@ -270,27 +259,16 @@ form div > :nth-child(2) {
   border-radius: 0.5rem;
 }
 
-form div > :nth-child(2):focus {
-  outline: transparent;
-}
-
 /* Footer */
 
-footer {
-  display: flex;
-  justify-content: center;
-
+.footer {
   background-color: #303846;
 }
 
-footer h3 {
+.footer h3 {
   margin-bottom: 1rem;
 }
 
-footer ul {
+.list {
   padding-left: 2.5rem;
-}
-
-footer li {
-  list-style-type: initial;
 }

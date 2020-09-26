@@ -13,15 +13,15 @@
   </head>
 
   <body>
-    <header>
-      <div class="logo w20 d-flex align-items-center">
+    <header class="header header-fixed d-flex space-between bg_white text_bold">
+      <div class="logo w-20 d-flex align-items-center">
         <img src="./assets/logo.svg"
              alt="Logo"
              class="mr logo__img">
         <span>Лунное море</span>
       </div>
-      <nav class="menu fl-grow-3">
-        <ul>
+      <nav class="navigation fl-grow-3">
+        <ul class="d-flex space-between align-items-center">
           <li>
             <a href="#advantages">Преимущества</a>
           </li>
@@ -35,85 +35,80 @@
       </nav>
     </header>
     <main>
-      <section class="txt-align-center">
-        <div class="content d-inln-block txt-align-center">
-          <a id="main"></a>
+      <section id="banner"
+               class="text_center">
+        <div class="content d-inln-block text_center text_white">
           <img src="assets/logo.svg"
                alt="Logo">
-          <h1>ЖК &laquo;Лунное море&raquo;</h1>
-          <p>Место, откуда не хочется улетать</p>
+          <h1 class="text_white">ЖК &laquo;Лунное море&raquo;</h1>
+          <p class="text_white">Место, откуда не хочется улетать</p>
           <form action="#bookin-form">
-            <button class="btn">Забронировать</button>
+            <button class="btn border_white text_white text_bold">Забронировать</button>
           </form>
         </div>
       </section>
-      <section class="d-flex jst-cnt-center"><a id="advantages">
-          <div class="content d-flex space-between">
-            <article>
-              <h2>Уникальный вид</h2>
-              <p>Вид на космос из вашего окна. Мы построили дома с большими окнами, чтобы вы могли наслаждаться
-                метеоритными
-                потоками.</p>
-            </article>
-            <article>
-              <h2>Инфраструктура</h2>
-              <p>Прекрасные дороги рядом с домом. Много мест для прогулки. Всего в 200 км. от посёлка находится кольцо
-                гор
-                Кордильеры, на
-                которых вы сможете провести незабываемые выходные.</p>
-            </article>
-            <article>
-              <h2>Близость к Москве</h2>
-              <p>При небольшой цене мы располагаемся близко к МКАД. Всего 384 000 километров и вы в самом сердце России.
-              </p>
-            </article>
-          </div>
-        </a>
+      <section id="advantages"
+               class="d-flex space-around">
+        <article>
+          <h2>Уникальный вид</h2>
+          <p>Вид на космос из вашего окна. Мы построили дома с большими окнами, чтобы вы могли наслаждаться
+            метеоритными
+            потоками.</p>
+        </article>
+        <article>
+          <h2>Инфраструктура</h2>
+          <p>Прекрасные дороги рядом с домом. Много мест для прогулки. Всего в 200 км. от посёлка находится кольцо
+            гор
+            Кордильеры, на
+            которых вы сможете провести незабываемые выходные.</p>
+        </article>
+        <article>
+          <h2>Близость к Москве</h2>
+          <p>При небольшой цене мы располагаемся близко к МКАД. Всего 384 000 километров и вы в самом сердце России.
+          </p>
+        </article>
       </section>
-      <section class="d-flex jst-cnt-center">
-        <a id="about">
-          <div class="content d-flex space-evenly">
-            <article>
-              <h2>О ЖК &laquo;Лунное море&raquo;</h2>
-              <p>
-                Все чаще жители Москвы предпочитают загородный дом городской квартире, к тому же связь с мегаполисом не
-                теряется –
-                современные скоростные трассы позволяют без труда добираться до столицы и обратно.
-              </p>
-              <p>
-                Мы построили наши дома на самом близком к Солнцу спутнике, всего в 380 тысяч километров от Земли.
-              </p>
-            </article>
-            <img src="./assets/moon-1.jpg"
-                 alt="Moon">
-          </div>
-        </a>
+      <section id="about"
+               class="bg_cream">
+        <div class="content d-flex space-evenly">
+          <article>
+            <h2>О ЖК &laquo;Лунное море&raquo;</h2>
+            <p>
+              Все чаще жители Москвы предпочитают загородный дом городской квартире, к тому же связь с мегаполисом не
+              теряется –
+              современные скоростные трассы позволяют без труда добираться до столицы и обратно.
+            </p>
+            <p>
+              Мы построили наши дома на самом близком к Солнцу спутнике, всего в 380 тысяч километров от Земли.
+            </p>
+          </article>
+          <img src="./assets/moon-1.jpg"
+               alt="Half-lit moon">
+        </div>
       </section>
-      <section class="d-flex jst-cnt-center">
-        <a id="places">
-          <div class="content d-flex space-evenly flx-dir-row-r">
-            <article>
-              <h2>Места для отдыха</h2>
-              <p>Луна обладает всеми условиями для комфортного отдыха от большого города. В вашем распоряжении 22 моря и
-                18 гор. Самое
-                ближайшее кольцо гор всего в 200 километров от вашей квартиры.</p>
-              <p>Дома располагаются в новом районе «Лунные моря». При необходимости есть автобусы до района «Лунный
-                материк».</p>
-            </article>
-            <img src="./assets/moon-2.jpg"
-                 alt="Places for rest">
-          </div>
-        </a>
+      <section id="places">
+        <div class="content d-flex space-evenly flx-dir-row-r">
+          <article>
+            <h2>Места для отдыха</h2>
+            <p>Луна обладает всеми условиями для комфортного отдыха от большого города. В вашем распоряжении 22 моря и
+              18 гор. Самое
+              ближайшее кольцо гор всего в 200 километров от вашей квартиры.</p>
+            <p>Дома располагаются в новом районе «Лунные моря». При необходимости есть автобусы до района «Лунный
+              материк».</p>
+          </article>
+          <img src="./assets/moon-2.jpg"
+               alt="Astronaft resting on the moon">
+        </div>
       </section>
-      <section class="d-flex-column align-items-center"
-               id="booking">
-        <a id="booking-form"></a>
+      <section id="booking"
+               class="d-flex-column align-items-center bg_cream">
         <h2>Оставьте заявку сегодня!</h2>
         <form class="content">
-          <fieldset class="border_green">
+          <fieldset class="fieldset border_green">
             <legend class="text_green">Параметры квартиры</legend>
             <div class="d-flex space-between">
-              <label for="room-options">Количество комнат:</label>
+              <label for="room-options"
+                     class="text_bold">Количество комнат:</label>
               <select id="room-options">
                 <option selected>3</option>
                 <option>2</option>
@@ -121,7 +116,8 @@
               </select>
             </div>
             <div class="d-flex space-between">
-              <label for="room-finishing">Отделка:</label>
+              <label for="room-finishing"
+                     class="text_bold">Отделка:</label>
               <select id="room-finishing">
                 <option selected>Без отделки</option>
                 <option>Евроремонт</option>
@@ -129,55 +125,62 @@
               </select>
             </div>
           </fieldset>
-          <fieldset class="d-flex border_green">
+          <fieldset class="fieldset border_green d-flex-column">
             <legend class="text_green">Контактная информация</legend>
             <div class="d-flex space-between">
-              <label for="name">Имя:</label>
+              <label for="name"
+                     class="text_bold">Имя:</label>
               <input id="name"
                      type="text"
                      required />
             </div>
             <div class="d-flex space-between">
-              <label for="phone">Телефон:</label>
+              <label for="phone"
+                     class="text_bold">Телефон:</label>
               <input type="tel"
                      id="phone"
                      required />
             </div>
             <div class="d-flex space-between">
-              <label for="email">E-mail:</label>
+              <label for="email"
+                     class="text_bold">E-mail:</label>
               <input type="email"
                      id="email"
                      required />
             </div>
           </fieldset>
           <button type="submit"
-                  class="btn text_green border_green">Отправить</button>
+                  class="btn text_green border_green text_bold">Отправить</button>
         </form>
       </section>
     </main>
-    <footer>
-      <section class="d-flex content">
+    <footer class="footer">
+      <section class="d-flex content space-between">
         <div class="logo-wrapper">
           <div class="logo d-flex align-items-center">
             <img src="./assets/logo.svg"
                  alt="Logo"
                  class="mr logo__img">
-            <span>Лунное море</span>
+            <span class="text_white">Лунное море</span>
           </div>
-          <small>&copy; 2032 год</small>
+          <small class="text_white">&copy; 2032 год</small>
         </div>
-        <div class="documentation">
-          <h3>Проектная документация</h3>
-          <ul>
-            <li><a href="#download">Скачать</a></li>
-            <li><a href="#gotopage">Посмотреть на сайте</a></li>
+        <div class="documentation text_white">
+          <h3 class="text_white">Проектная документация</h3>
+          <ul class="list">
+            <li><a class="text_white"
+                 href="#download">Скачать</a></li>
+            <li><a class="text_white"
+                 href="#gotopage">Посмотреть на сайте</a></li>
           </ul>
         </div>
         <div class="about">
-          <h3>О застройщике</h3>
+          <h3 class="text_white">О застройщике</h3>
           <ul>
-            <li><a href="#feedbacks">Отзывы</a></li>
-            <li><a href="#main">Сайт компании</a></li>
+            <li><a class="text_white"
+                 href="#feedbacks">Отзывы</a></li>
+            <li><a class="text_white"
+                 href="#banner">Сайт компании</a></li>
           </ul>
         </div>
       </section>
