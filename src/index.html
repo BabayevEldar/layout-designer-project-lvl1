@@ -17,7 +17,7 @@
       <div class="logo w-20 d-flex align-items-center">
         <img src="./assets/logo.svg"
              alt="Logo"
-             class="mr logo__img">
+             class="mr-1 logo__img">
         <span>Лунное море</span>
       </div>
       <nav class="navigation fl-grow-3">
@@ -102,71 +102,78 @@
       </section>
       <section id="booking"
                class="d-flex-column align-items-center bg_cream">
-        <h2>Оставьте заявку сегодня!</h2>
-        <form class="content">
-          <fieldset class="fieldset border_green">
-            <legend class="text_green">Параметры квартиры</legend>
-            <div class="d-flex space-between">
-              <label for="room-options"
-                     class="text_bold">Количество комнат:</label>
-              <select id="room-options">
-                <option selected>3</option>
-                <option>2</option>
-                <option>1</option>
-              </select>
-            </div>
-            <div class="d-flex space-between">
-              <label for="room-finishing"
-                     class="text_bold">Отделка:</label>
-              <select id="room-finishing">
-                <option selected>Без отделки</option>
-                <option>Евроремонт</option>
-                <option>Не важно</option>
-              </select>
-            </div>
-          </fieldset>
-          <fieldset class="fieldset border_green d-flex-column">
-            <legend class="text_green">Контактная информация</legend>
-            <div class="d-flex space-between">
-              <label for="name"
-                     class="text_bold">Имя:</label>
-              <input id="name"
-                     type="text"
-                     required />
-            </div>
-            <div class="d-flex space-between">
-              <label for="phone"
-                     class="text_bold">Телефон:</label>
-              <input type="tel"
-                     id="phone"
-                     required />
-            </div>
-            <div class="d-flex space-between">
-              <label for="email"
-                     class="text_bold">E-mail:</label>
-              <input type="email"
-                     id="email"
-                     required />
-            </div>
-          </fieldset>
-          <button type="submit"
-                  class="btn text_green border_green text_bold">Отправить</button>
-        </form>
+        <div class="content">
+          <h2 class="text_center">Оставьте заявку сегодня!</h2>
+          <form class="content"
+                onsubmit="alert('Form sended!')">
+            <fieldset class="fieldset border_green">
+              <legend class="text_green">Параметры квартиры</legend>
+              <div class="d-flex space-between mb-1">
+                <label for="room-options"
+                       class="text_bold">Количество комнат:</label>
+                <select id="room-options">
+                  <option selected>3</option>
+                  <option>2</option>
+                  <option>1</option>
+                </select>
+              </div>
+              <div class="d-flex space-between mb-1">
+                <label for="room-finishing"
+                       class="text_bold">Отделка:</label>
+                <select id="room-finishing">
+                  <option selected>Без отделки</option>
+                  <option>Евроремонт</option>
+                  <option>Не важно</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset class="fieldset border_green d-flex-column mb-1">
+              <legend class="text_green">Контактная информация</legend>
+              <div class="d-flex space-between mb-1">
+                <label for="name"
+                       class="text_bold">Имя:</label>
+                <input id="name"
+                       type="text"
+                       placeholder="Введите ваше имя"
+                       required />
+              </div>
+              <div class="d-flex space-between mb-1">
+                <label for="phone"
+                       class="text_bold">Телефон:</label>
+                <input type="tel"
+                       id="phone"
+                       pattern="\d*"
+                       placeholder="Контактный телефон"
+                       required />
+              </div>
+              <div class="d-flex space-between">
+                <label for="email"
+                       class="text_bold">E-mail:</label>
+                <input type="email"
+                       id="email"
+                       placeholder="Адрес электронной почты"
+                       required />
+              </div>
+            </fieldset>
+            <button type="submit"
+                    class="btn text_green border_green text_bold">Отправить</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="footer">
       <section class="d-flex content space-between">
         <div class="logo-wrapper">
-          <div class="logo d-flex align-items-center">
+          <div class="logo d-flex align-items-center mb-1">
             <img src="./assets/logo.svg"
                  alt="Logo"
-                 class="mr logo__img">
+                 class="mr-1 logo__img">
             <span class="text_white">Лунное море</span>
           </div>
           <small class="text_white">&copy; 2032 год</small>
         </div>
         <div class="documentation text_white">
-          <h3 class="text_white">Проектная документация</h3>
+          <h3 class="text_white mb-1">Проектная документация</h3>
           <ul class="list">
             <li><a class="text_white"
                  href="#download">Скачать</a></li>
@@ -175,8 +182,8 @@
           </ul>
         </div>
         <div class="about">
-          <h3 class="text_white">О застройщике</h3>
-          <ul>
+          <h3 class="text_white mb-1">О застройщике</h3>
+          <ul class="list">
             <li><a class="text_white"
                  href="#feedbacks">Отзывы</a></li>
             <li><a class="text_white"
