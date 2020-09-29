@@ -36,42 +36,42 @@
     </header>
     <main>
       <section id="banner"
-               class="text_center">
-        <div class="content d-inln-block text_center text_white">
-          <img src="assets/logo.svg"
+               class="banner text_center text_white">
+        <div class="content d-flex-column">
+          <img class="banner__img"
+               src="assets/logo.svg"
                alt="Logo">
-          <h1 class="text_white">ЖК &laquo;Лунное море&raquo;</h1>
-          <p class="text_white">Место, откуда не хочется улетать</p>
-          <form action="#bookin-form">
-            <button class="btn border_white text_white text_bold">Забронировать</button>
-          </form>
+          <h1>ЖК &laquo;Лунное море&raquo;</h1>
+          <p>Место, откуда не хочется улетать</p>
+          <a href="#booking"
+             class="btn border_white text_bold align-self-center">Забронировать</a>
         </div>
       </section>
       <section id="advantages"
                class="d-flex space-around">
-        <article>
-          <h2>Уникальный вид</h2>
+        <div class="w-30">
+          <h2 class="h2">Уникальный вид</h2>
           <p>Вид на космос из вашего окна. Мы построили дома с большими окнами, чтобы вы могли наслаждаться
             метеоритными
             потоками.</p>
-        </article>
-        <article>
-          <h2>Инфраструктура</h2>
+        </div>
+        <div class="w-30">
+          <h2 class="h2">Инфраструктура</h2>
           <p>Прекрасные дороги рядом с домом. Много мест для прогулки. Всего в 200 км. от посёлка находится кольцо
             гор
             Кордильеры, на
             которых вы сможете провести незабываемые выходные.</p>
-        </article>
-        <article>
-          <h2>Близость к Москве</h2>
+        </div>
+        <div class="w-30">
+          <h2 class="h2">Близость к Москве</h2>
           <p>При небольшой цене мы располагаемся близко к МКАД. Всего 384 000 километров и вы в самом сердце России.
           </p>
-        </article>
+        </div>
       </section>
       <section id="about"
                class="bg_cream">
         <div class="content d-flex space-evenly">
-          <article>
+          <div class="w-45">
             <h2>О ЖК &laquo;Лунное море&raquo;</h2>
             <p>
               Все чаще жители Москвы предпочитают загородный дом городской квартире, к тому же связь с мегаполисом не
@@ -81,37 +81,42 @@
             <p>
               Мы построили наши дома на самом близком к Солнцу спутнике, всего в 380 тысяч километров от Земли.
             </p>
-          </article>
-          <img src="./assets/moon-1.jpg"
+          </div>
+          <img class="w-30"
+               src="./assets/moon-1.jpg"
                alt="Half-lit moon">
         </div>
       </section>
       <section id="places">
         <div class="content d-flex space-evenly flx-dir-row-r">
-          <article>
+          <div class="w-45">
             <h2>Места для отдыха</h2>
             <p>Луна обладает всеми условиями для комфортного отдыха от большого города. В вашем распоряжении 22 моря и
               18 гор. Самое
               ближайшее кольцо гор всего в 200 километров от вашей квартиры.</p>
             <p>Дома располагаются в новом районе «Лунные моря». При необходимости есть автобусы до района «Лунный
               материк».</p>
-          </article>
-          <img src="./assets/moon-2.jpg"
+          </div>
+          <img class="w-30"
+               src="./assets/moon-2.jpg"
                alt="Astronaft resting on the moon">
         </div>
       </section>
       <section id="booking"
-               class="d-flex-column align-items-center bg_cream">
-        <div class="content">
-          <h2 class="text_center">Оставьте заявку сегодня!</h2>
-          <form class="content"
+               class="bg_cream">
+        <h2 class="h2 text_center">Оставьте заявку сегодня!</h2>
+        <article class="content d-flex-column align-items-center">
+          <form class="content_half"
                 onsubmit="alert('Form sended!')">
             <fieldset class="fieldset border_green">
-              <legend class="text_green">Параметры квартиры</legend>
+              <legend class="text_green">
+                <h3>Параметры квартиры</h3>
+              </legend>
               <div class="d-flex space-between mb-1">
                 <label for="room-options"
-                       class="text_bold">Количество комнат:</label>
-                <select id="room-options">
+                       class="text_bold w-45">Количество комнат:</label>
+                <select class="bg_white w-45"
+                        id="room-options">
                   <option selected>3</option>
                   <option>2</option>
                   <option>1</option>
@@ -119,8 +124,9 @@
               </div>
               <div class="d-flex space-between mb-1">
                 <label for="room-finishing"
-                       class="text_bold">Отделка:</label>
-                <select id="room-finishing">
+                       class="w-45 text_bold">Отделка:</label>
+                <select class="bg_white w-45"
+                        id="room-finishing">
                   <option selected>Без отделки</option>
                   <option>Евроремонт</option>
                   <option>Не важно</option>
@@ -128,19 +134,23 @@
               </div>
             </fieldset>
             <fieldset class="fieldset border_green d-flex-column mb-1">
-              <legend class="text_green">Контактная информация</legend>
+              <legend class="text_green">
+                <h3>Контактная информация</h3>
+              </legend>
               <div class="d-flex space-between mb-1">
                 <label for="name"
-                       class="text_bold">Имя:</label>
+                       class="text_bold w-45">Имя:</label>
                 <input id="name"
+                       class="w-45"
                        type="text"
                        placeholder="Введите ваше имя"
                        required />
               </div>
               <div class="d-flex space-between mb-1">
                 <label for="phone"
-                       class="text_bold">Телефон:</label>
+                       class="text_bold w-45">Телефон:</label>
                 <input type="tel"
+                       class="w-45"
                        id="phone"
                        pattern="\d*"
                        placeholder="Контактный телефон"
@@ -148,46 +158,43 @@
               </div>
               <div class="d-flex space-between">
                 <label for="email"
-                       class="text_bold">E-mail:</label>
+                       class="text_bold w-45">E-mail:</label>
                 <input type="email"
+                       class="w-45"
                        id="email"
                        placeholder="Адрес электронной почты"
                        required />
               </div>
             </fieldset>
             <button type="submit"
-                    class="btn text_green border_green text_bold">Отправить</button>
+                    class="btn text_green border_green text_bold w-30">Отправить</button>
           </form>
-        </div>
+        </article>
       </section>
     </main>
-    <footer class="footer">
-      <section class="d-flex content space-between">
+    <footer class="footer bg_dark">
+      <section class="d-flex content space-between text_white">
         <div class="logo-wrapper">
           <div class="logo d-flex align-items-center mb-1">
             <img src="./assets/logo.svg"
                  alt="Logo"
                  class="mr-1 logo__img">
-            <span class="text_white">Лунное море</span>
+            <span>Лунное море</span>
           </div>
-          <small class="text_white">&copy; 2032 год</small>
+          <small>&copy; 2032 год</small>
         </div>
-        <div class="documentation text_white">
-          <h3 class="text_white mb-1">Проектная документация</h3>
+        <div class="documentation">
+          <h3 class="mb-1">Проектная документация</h3>
           <ul class="list">
-            <li><a class="text_white"
-                 href="#download">Скачать</a></li>
-            <li><a class="text_white"
-                 href="#gotopage">Посмотреть на сайте</a></li>
+            <li><a href="#download">Скачать</a></li>
+            <li><a href="#gotopage">Посмотреть на сайте</a></li>
           </ul>
         </div>
         <div class="about">
-          <h3 class="text_white mb-1">О застройщике</h3>
+          <h3 class="mb-1">О застройщике</h3>
           <ul class="list">
-            <li><a class="text_white"
-                 href="#feedbacks">Отзывы</a></li>
-            <li><a class="text_white"
-                 href="#banner">Сайт компании</a></li>
+            <li><a href="#feedbacks">Отзывы</a></li>
+            <li><a href="#banner">Сайт компании</a></li>
           </ul>
         </div>
       </section>
