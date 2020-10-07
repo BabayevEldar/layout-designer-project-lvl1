@@ -1,11 +1,33 @@
 /** CSS STYLE **/
-html * {
+:root {
+  --dark: black;
+  --light: white;
+  --gray: #303846;
+  --cream: #f7f7f7;
+  --success: #09d3ac;
+  --alert: tomato;
+  --content-width: 1000px;
+  --height: 3.75rem;
+  --logo-height: 2.5rem;
+  --padding: 0.625rem;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --bg-space: url("../assets/banner.png");
+  --shadow-radius: 1rem;
+}
+
+body {
+  margin: unset;
+  padding: unset;
+}
+
+body * {
   box-sizing: border-box;
   margin: unset;
   padding: 0;
 
   color: inherit;
-  font-size: 16px;
+  font-size: var(--font-size);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   text-decoration: unset;
@@ -30,11 +52,11 @@ input:focus,
 button:focus,
 a:focus {
   outline: none;
-  box-shadow: 0 0 1rem #09d3ac;
+  box-shadow: 0 0 var(--shadow-radius) var(--success);
 }
 
 input:not(:placeholder-shown):invalid:focus {
-  box-shadow: 0 0 1rem tomato;
+  box-shadow: 0 0 var(--shadow-radius) var(--alert);
 }
 
 small {
@@ -52,16 +74,16 @@ li {
   list-style-type: none;
 }
 
-.bg_white {
-  background-color: white;
+.bg-white {
+  background-color: var(--light);
 }
 
-.bg_dark {
-  background-color: #303846;
+.bg-dark {
+  background-color: var(--gray);
 }
 
-.bg_cream {
-  background-color: #f7f7f7;
+.bg-cream {
+  background-color: var(--cream);
 }
 
 .fl-grow-3 {
@@ -78,6 +100,22 @@ li {
 
 .w-45 {
   width: 45%;
+}
+
+.pt-0 {
+  padding-top: var(--padding);
+}
+
+.pb-0 {
+  padding-bottom: var(--padding);
+}
+
+.pl-2 {
+  padding-left: calc(var(--padding) * 2);
+}
+
+.pl-4 {
+  padding-left: calc(var(--padding) * 4);
 }
 
 .mr-1 {
@@ -129,26 +167,38 @@ li {
   align-self: center;
 }
 
-.text_center {
+.text-center {
   text-align: center;
 }
 
 .btn {
-  padding: 0.625rem;
+  padding: var(--padding);
 
   font-size: 1em;
 
   background-color: unset;
   border-style: groove;
-  border-radius: 0.625rem;
+  border-radius: var(--padding);
 }
 
-.border_white {
-  border-color: white;
+.btn-text-green {
+  color: var(--success);
+  font-weight: bold;
 }
 
-.border-radius_50 {
-  border-radius: 0.5rem;
+.btn-text-light {
+  color: var(---light);
+  font-weight: bold;
+}
+
+.btn-border-white {
+  border-color: var(---light);
+  border-radius: var(--padding);
+}
+
+.btn-border-green {
+  border-color: var(--success);
+  border-radius: var(--padding);
 }
 
 .btn:hover {
@@ -162,38 +212,32 @@ h1 {
 h2 {
   padding-bottom: 0.5em;
 
-  font-size: 1.8em;
-}
-
-.h2 {
-  padding-bottom: 0.5em;
-
   font-weight: bold;
   font-size: 1.8em;
 }
 
-.border_green {
-  border-color: #09d3ac;
+.border-green {
+  border-color: var(--success);
 }
 
-.text_green {
-  color: #09d3ac;
+.text-green {
+  color: var(--success);
 }
 
-.text_white {
-  color: white;
+.text-white {
+  color: var(--light);
 }
 
-.text_bold {
+.text-bold {
   font-weight: bold;
 }
 
 section {
-  padding: 3.75rem 0;
+  padding: var(--height) 0;
 }
 
-.logo__img {
-  height: 2.5rem;
+.logo--img {
+  height: var(--logo-height);
 }
 
 .logo-wrapper {
@@ -202,7 +246,7 @@ section {
 }
 
 .header {
-  height: 3.75rem;
+  height: var(--height);
   padding: 1rem 2rem;
 }
 
@@ -215,11 +259,12 @@ section {
 /*  Main part */
 
 main {
-  padding-top: 3.75rem;
+  padding-top: var(--height);
 }
 
-.banner {
-  background-image: url("../assets/banner.png");
+.bg-space {
+  background-color: var(--gray);
+  background-image: var(--bg-space);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -228,21 +273,18 @@ main {
 /* Section with image */
 
 .content {
-  max-width: 1000px;
+  width: 100%;
+  max-width: var(--content-width);
   margin: 0 auto;
 }
 
-.content_half {
-  width: 50%;
-  max-width: 500px;
+.content-half {
+  width: 100%;
+  max-width: calc(var(--content-width) / 2);
 }
 
-.banner__img {
-  height: 8rem;
-}
-
-.content > p {
-  padding: 0.5rem;
+.banner--img {
+  height: calc(var(--logo-height) * 3.2);
 }
 
 /* Form section */
@@ -253,18 +295,12 @@ main {
   border-style: groove;
 }
 
-form div > :nth-child(2) {
+.form-input {
   width: 50%;
   padding: 0.3rem 0.5rem;
 
   font-size: 0.8rem;
 
   border: 1px solid;
-  border-radius: 0.5rem;
-}
-
-/* Footer */
-
-.list {
-  padding-left: 2.5rem;
+  border-radius: var(--padding);
 }
