@@ -17,27 +17,26 @@
 }
 
 body {
-  margin: unset;
   padding: unset;
-}
 
-body * {
-  box-sizing: border-box;
-  margin: unset;
-  padding: 0;
-
-  color: inherit;
   font-size: var(--font-size);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+}
+
+*,
+a,
+a:active {
+  box-sizing: border-box;
+  margin: unset;
+  padding: unset;
+
+  color: unset;
+
   text-decoration: unset;
 
   list-style-type: none;
-}
 
-label,
-button,
-a {
   outline: none;
   cursor: pointer;
 }
@@ -181,23 +180,19 @@ li {
   border-radius: var(--padding);
 }
 
-.btn-text-green {
+.btn-green {
   color: var(--success);
   font-weight: bold;
-}
 
-.btn-text-light {
-  color: var(---light);
-  font-weight: bold;
-}
-
-.btn-border-white {
-  border-color: var(---light);
+  border-color: var(--success);
   border-radius: var(--padding);
 }
 
-.btn-border-green {
-  border-color: var(--success);
+.btn-light {
+  color: var(---light);
+  font-weight: bold;
+
+  border-color: var(---light);
   border-radius: var(--padding);
 }
 
@@ -214,6 +209,11 @@ h2 {
 
   font-weight: bold;
   font-size: 1.8em;
+}
+
+.h3 {
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .border-green {
