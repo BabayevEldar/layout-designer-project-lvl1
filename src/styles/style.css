@@ -24,9 +24,7 @@ body {
   line-height: 1.5;
 }
 
-*,
-a,
-a:active {
+* {
   box-sizing: border-box;
   margin: unset;
   padding: unset;
@@ -101,11 +99,11 @@ li {
   width: 45%;
 }
 
-.pt-0 {
+.pt-1 {
   padding-top: var(--padding);
 }
 
-.pb-0 {
+.pb-1 {
   padding-bottom: var(--padding);
 }
 
